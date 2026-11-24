@@ -1,0 +1,91 @@
+/* Incident response: summary chips, team / responder badges, the response panel, the incident
+   report (screen and print / PDF) and the authority notice. */
+.inc-summary { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.inc-summary:empty { display: none; }
+.sum-chip { display: inline-flex; align-items: baseline; gap: 6px; border: 1px solid var(--border); border-radius: 8px; padding: 4px 9px; background: var(--panel-2); }
+.sum-chip small { color: var(--muted); font-size: 11.5px; }
+.sum-chip b { font-size: 13px; }
+.sum-chip.tone-bad { border-color: #7f1d1d; }
+.sum-chip.tone-bad b { color: var(--critical-ink); }
+.sum-chip.tone-warn b { color: var(--warning-ink); }
+.sum-chip.tone-info b { color: var(--info-ink); }
+
+.item-badges { flex-wrap: wrap; }
+.badge.team-security { background: #13233a; color: var(--info-ink); }
+.badge.team-safety { background: #2d2410; color: var(--warning-ink); }
+.badge.team-emergency { background: #3b1414; color: var(--critical-ink); }
+.badge-assignee { background: #1d2733; color: var(--text-2); }
+.badge-overdue { background: var(--critical-ink); color: #1a0505; }
+
+.response-box { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-bottom: 12px; background: var(--panel-2); display: flex; flex-direction: column; gap: 10px; }
+.response-box.is-overdue { border-color: #7f1d1d; background: #1f1012; }
+.response-box .sub-h { margin: 0; }
+.overdue-text { margin: 0; color: var(--critical-ink); font-weight: 600; font-size: 13px; }
+.team-select { font: inherit; padding: 3px 6px; }
+
+.contacts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.contacts li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-size: 13px; }
+.contacts small { color: var(--muted); }
+.brief { border: 1px dashed var(--axis); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.7; background: var(--panel-2); user-select: text; }
+
+.authority-dialog { width: min(560px, calc(100vw - 32px)); }
+.report-dialog { width: min(900px, calc(100vw - 32px)); max-height: calc(100vh - 32px); }
+.report-wrap { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
+.report-sheet { display: flex; flex-direction: column; gap: 6px; line-height: 1.6; }
+.report-sheet h1 { font-size: 20px; margin: 2px 0 0; }
+.report-sheet h3 { font-size: 14px; margin: 12px 0 2px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 3px; }
+.report-sheet p { margin: 0; }
+.report-sheet ul { margin: 0; padding-inline-start: 20px; }
+.report-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.report-title small { color: var(--muted); }
+.report-kv { grid-template-columns: 200px 1fr; }
+.report-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.report-table td, .report-table th { padding: 5px 6px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+.report-foot { color: var(--muted); font-size: 12px; margin-top: 12px !important; }
+
+/* Print / Save as PDF: a plain copy of the report (.print-sheet, see report.js), black on white. */
+.print-sheet { display: none; }
+@media print {
+  html.printing, html.printing body { background: #fff !important; color: #000; }
+  html.printing body > *:not(.print-sheet) { display: none !important; }
+  html.printing .print-sheet { display: block; color: #000; }
+  .print-sheet .report-sheet h3 { color: #000; border-color: #999; }
+  .print-sheet .report-title small, .print-sheet .report-foot, .print-sheet dl.kv dt, .print-sheet th { color: #444 !important; }
+  .print-sheet .report-table td, .print-sheet .report-table th { border-color: #bbb; }
+  .print-sheet .report-table tr { break-inside: avoid; }
+  .print-sheet .badge { border: 1px solid #000; color: #000; background: none; }
+}
+
+/* Camera zones (Drone & cameras page). */
+.zone-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 6px; }
+.zone-tools .sub { flex: 1 1 160px; font-size: 12px; }
+#cv-b1, #cv-c2 { cursor: crosshair; }
+
+/* SAWN WHAT-IF (Readiness page). */
+.whatif { display: grid; grid-template-columns: minmax(240px, 320px) 1fr; gap: 14px; }
+@media (max-width: 900px) { .whatif { grid-template-columns: 1fr; } }
+.whatif-form { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.whatif-form .field { width: 100%; }
+.whatif-form select { width: 100%; }
+.whatif-fails { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.whatif-result { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.whatif-card { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; background: var(--panel-2); }
+.whatif-card h3 { font-size: 13.5px; margin: 0 0 8px; color: var(--accent); }
+.whatif-card ul, .whatif-card ol { margin: 0; padding-inline-start: 18px; line-height: 1.6; font-size: 13px; }
+.whatif-risks li { color: var(--warning-ink); }
+
+/* AI cameras (real video). */
+.ai-tiles { grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
+.ai-canvas { width: 100%; height: auto; aspect-ratio: 16 / 9; background: #05080f; }
+.ev-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+.ev-images figure { margin: 0; }
+.ev-images img { width: 100%; border-radius: 8px; border: 1px solid var(--border); display: block; }
+.ev-images figcaption { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+/* AI cameras: role and sensitive-area permit. */
+.role-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; }
+.role-row .sub { font-size: 12px; }
+.role-select { max-width: 100%; }
+.permit-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); font-size: 12.5px; }
+.permit-bar.is-off { border-color: rgba(248, 113, 113, 0.6); background: rgba(248, 113, 113, 0.08); }
+.permit-bar.is-on { border-color: rgba(74, 222, 128, 0.6); background: rgba(74, 222, 128, 0.08); }

@@ -1,0 +1,79 @@
+/* Airspace: confidence display, evidence weights, drones & radio environment. */
+.conf-chip { display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; border: 1px solid currentColor; vertical-align: middle; }
+.conf-chip.conf-high, .conf-fill.conf-high { color: var(--good-ink); }
+.conf-chip.conf-medium, .conf-fill.conf-medium { color: var(--warning-ink); }
+.conf-chip.conf-low, .conf-fill.conf-low { color: var(--critical-ink); }
+.conf-panel { display: flex; flex-direction: column; gap: 4px; min-width: 260px; }
+.conf-row { display: grid; grid-template-columns: 62px 90px 38px 1fr; gap: 6px; align-items: center; font-size: 12px; }
+.conf-label { color: var(--muted); }
+.conf-track { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.conf-fill { display: block; height: 100%; background: currentColor; }
+.conf-pct { font-family: ui-monospace, monospace; font-size: 12px; }
+.conf-reason { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.conf-note { font-size: 12.5px; margin-top: 2px; }
+.evidence-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; font-size: 12px; }
+.evidence-list b { font-family: ui-monospace, monospace; display: inline-block; min-width: 42px; }
+.evidence-list .ev-type b { color: var(--good-ink); }
+.evidence-list .ev-other b { color: var(--critical-ink); }
+.evidence-list .ev-os b, .evidence-list .ev-none b { color: var(--muted); }
+.threat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.threat-pane { min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel-2); }
+.threat-pane-head, .threat-item-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.threat-pane-head { margin-bottom: 10px; }
+.threat-pane h3 { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 14px; }
+.threat-pane-head .pill { margin-inline-start: auto; }
+.threat-empty { margin: 0; padding: 12px; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.threat-subsection { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.evil-twin-list { margin-bottom: 8px; }
+.drone-list, .radio-sensor-list, .ap-scan-list { display: flex; flex-direction: column; gap: 8px; }
+.drone-card, .radio-sensor-card, .ap-scan-card { min-width: 0; padding: 10px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); }
+.drone-card.row-crit, .ap-scan-card.ap-scan-error { border-color: var(--critical-ink); }
+.threat-item-head > div { min-width: 0; }
+.threat-item-head strong { display: block; overflow-wrap: anywhere; }
+.radio-freshness { color: var(--muted); font-size: 11px; text-align: end; white-space: nowrap; }
+.threat-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 10px 0 0; }
+.threat-fact { min-width: 0; padding: 7px 8px; border-radius: 7px; background: var(--panel-2); }
+.threat-fact.wide { grid-column: span 2; }
+.threat-fact dt { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+.threat-fact dd { margin: 3px 0 0; font-size: 12px; line-height: 1.35; overflow-wrap: anywhere; }
+.radio-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.radio-checks { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-top: 10px; }
+.radio-checks > .sub { margin-inline-end: 2px; }
+.radio-checks .pill { margin: 0; font-size: 10.5px; }
+.radio-baseline { margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--border); line-height: 1.4; }
+.threat-span { grid-column: 1 / -1; }
+.ap-diagnostics { border: 1px solid var(--border); border-radius: 12px; background: var(--panel-2); padding: 0 12px 12px; }
+.ap-diagnostics > summary { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; min-height: 44px; cursor: pointer; list-style: none; font-size: 13px; font-weight: 600; }
+.ap-diagnostics > summary::-webkit-details-marker { display: none; }
+.ap-diagnostics > summary::after { content: '▸'; margin-inline-start: auto; color: var(--muted); }
+.ap-diagnostics[open] > summary { margin-bottom: 8px; border-bottom: 1px solid var(--border); }
+.ap-diagnostics[open] > summary::after { content: '▾'; }
+.ap-diagnostics > summary .sub { font-weight: 400; }
+.ap-scan-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ap-pipeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin-top: 10px; }
+.ap-pipeline span { min-width: 0; padding: 5px 7px; border: 1px solid var(--border); border-radius: 6px; color: var(--text-2); font: 600 11px ui-monospace, Consolas, monospace; text-align: center; overflow-wrap: anywhere; }
+.ap-pipeline .ap-dropped { color: var(--critical-ink); border-color: currentColor; }
+.ap-driver-detail { margin: 8px 0 0; }
+@media (max-width: 1200px) { .threat-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .threat-facts, .radio-metrics, .ap-scan-facts, .ap-pipeline { grid-template-columns: minmax(0, 1fr); }
+  .threat-fact.wide { grid-column: span 1; }
+  .radio-freshness { white-space: normal; max-width: 45%; }
+}
+.site-location { margin-top: 12px; gap: 6px; }
+.site-location input { width: 120px; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px; font: inherit; }
+/* The confidence panel needs two columns of the details grid. */
+.detail-grid .field-item:has(.conf-panel) { grid-column: span 2; }
+
+/* Cloned-card drill and clone flag on the Gate A reader list */
+.reader-event-clone { display: block; color: var(--critical-ink); font-size: 12px; margin-top: 2px; }
+.reader-event.tone-bad { border-left: 3px solid var(--critical-ink); }
+#ga-security .field { max-width: 460px; }
+#ga-sec-pin { margin: 2px 0 8px; }
+
+/* Access & card health table (Readiness) */
+.pill-sm { font-size: 11px; padding: 2px 7px; }
+#rd-access td { vertical-align: middle; }
+#rd-access tr.row-bad td { background: var(--critical-soft, rgba(192,52,77,0.08)); }
+#rd-access tr.row-warn td { background: rgba(251,191,36,0.07); }
+#rd-access-summary { margin-inline-start: 8px; font-size: 12px; }

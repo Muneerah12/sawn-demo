@@ -1,0 +1,57 @@
+/* Arabic (right-to-left) layout. Flex and grid follow dir="rtl" by themselves; these rules flip the
+   few places that use physical left/right. Identifiers (MACs, IPs, card numbers) stay left-to-right. */
+.lang-toggle { font-weight: 600; min-width: 64px; }
+.auth-lang { align-self: flex-end; }
+
+[dir='rtl'] body,
+[dir='rtl'] button,
+[dir='rtl'] input,
+[dir='rtl'] select,
+[dir='rtl'] textarea { font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', system-ui, sans-serif; }
+
+[dir='rtl'] .mono,
+[dir='rtl'] input[type='number'],
+[dir='rtl'] .clock { direction: ltr; unicode-bidi: isolate; }
+
+[dir='rtl'] .auth-lang { align-self: flex-start; }
+[dir='rtl'] .right,
+[dir='rtl'] .radar-note,
+[dir='rtl'] .hero-updated,
+[dir='rtl'] .stage-status,
+[dir='rtl'] .health-st,
+[dir='rtl'] .approval-head .pill { margin-left: 0; margin-right: auto; }
+[dir='rtl'] .top .brand,
+[dir='rtl'] .dhead h3,
+[dir='rtl'] .gate-result-main { margin-right: 0; margin-left: auto; }
+
+[dir='rtl'] nav button,
+[dir='rtl'] .kpi-btn,
+[dir='rtl'] .bell-item,
+[dir='rtl'] th,
+[dir='rtl'] td,
+[dir='rtl'] .matrix td:first-child,
+[dir='rtl'] .matrix th:first-child { text-align: right; }
+[dir='rtl'] td.actions,
+[dir='rtl'] th.actions-col { text-align: left; }
+[dir='rtl'] td.actions > * + *,
+[dir='rtl'] td .pill + .pill { margin-left: 0; margin-right: 4px; }
+
+[dir='rtl'] .user-menu,
+[dir='rtl'] .bell-panel { right: auto; left: 0; }
+[dir='rtl'] .toasts { right: auto; left: 16px; }
+[dir='rtl'] .radar-hud,
+[dir='rtl'] .hint3 { left: auto; right: 10px; }
+
+[dir='rtl'] .activity li,
+[dir='rtl'] ul.tl li,
+[dir='rtl'] .note { border-left: 0; padding-left: 0; border-right: 2px solid var(--border); padding-right: 10px; }
+[dir='rtl'] .drill-rules,
+[dir='rtl'] .howto { padding-left: 0; padding-right: 18px; }
+[dir='rtl'] .legend i { margin-right: 0; margin-left: 4px; }
+[dir='rtl'] .map-dev-row .badge,
+[dir='rtl'] .badge-offline,
+[dir='rtl'] .hazard-badge,
+[dir='rtl'] details.section > summary .sub { margin-left: 0; margin-right: 6px; }
+[dir='rtl'] .conf-chip { margin-left: 0; margin-right: 8px; }
+[dir='rtl'] details.section > summary::before { transform: rotate(135deg); margin-right: 0; margin-left: 4px; }
+[dir='rtl'] details.section[open] > summary::before { transform: rotate(45deg); }

@@ -1,0 +1,310 @@
+{
+  "note": "One clip per phrase. Replace a silent placeholder with a real recording of the same file name; it is used automatically.",
+  "clips": {
+    "p-sim": {
+      "file": "p-sim.mp3",
+      "ar": "مُحَاكَاة",
+      "en": "Simulation"
+    },
+    "p-mid": {
+      "file": "p-mid.mp3",
+      "ar": "تَنْبِيهٌ",
+      "en": "Alert"
+    },
+    "p-high": {
+      "file": "p-high.mp3",
+      "ar": "تَحْذِير",
+      "en": "Warning"
+    },
+    "p-crit": {
+      "file": "p-crit.mp3",
+      "ar": "خَطَر",
+      "en": "Danger"
+    },
+    "drone-approaching": {
+      "file": "drone-approaching.mp3",
+      "ar": "طَائِرَة مُسَيَّرَة مَجْهُولَة تَقْتَرِب مِنَ المُنْشَأَة",
+      "en": "an unknown drone is approaching the site"
+    },
+    "drone-inside": {
+      "file": "drone-inside.mp3",
+      "ar": "طَائِرَة مُسَيَّرَة دَاخِل نِطَاق المُنْشَأَة",
+      "en": "a drone is inside the site perimeter"
+    },
+    "drone-pilot-inside": {
+      "file": "drone-pilot-inside.mp3",
+      "ar": "مُشَغِّل الطَّائِرَة المُسَيَّرَة دَاخِل حُدُود المُنْشَأَة",
+      "en": "the drone pilot is inside the site boundary"
+    },
+    "aircraft-restricted": {
+      "file": "aircraft-restricted.mp3",
+      "ar": "طَائِرَة دَخَلَت المَجَال الجَوِّيّ المَحْظُور",
+      "en": "an aircraft has entered the restricted airspace"
+    },
+    "aircraft-approaching-zone": {
+      "file": "aircraft-approaching-zone.mp3",
+      "ar": "طَائِرَة تَتَّجِه نَحْوَ المَجَال الجَوِّيّ المَحْظُور",
+      "en": "an aircraft is heading for the restricted airspace"
+    },
+    "aircraft-circling": {
+      "file": "aircraft-circling.mp3",
+      "ar": "طَائِرَة تَحُوم حَوْلَ المُنْشَأَة",
+      "en": "an aircraft is circling the site"
+    },
+    "squawk-7500": {
+      "file": "squawk-7500.mp3",
+      "ar": "طَائِرَة تُبَلِّغ عَنِ اخْتِطَاف",
+      "en": "an aircraft reports a hijack"
+    },
+    "squawk-7600": {
+      "file": "squawk-7600.mp3",
+      "ar": "طَائِرَة فَقَدَت الاتِّصَال اللَّاسِلْكِيّ",
+      "en": "an aircraft has lost radio contact"
+    },
+    "squawk-7700": {
+      "file": "squawk-7700.mp3",
+      "ar": "طَائِرَة تُعْلِن حَالَة طَوَارِئ",
+      "en": "an aircraft declares an emergency"
+    },
+    "gps-jamming": {
+      "file": "gps-jamming.mp3",
+      "ar": "تَشْوِيش مُحْتَمَل عَلَى إِشَارَة تَحْدِيد المَوَاقِع",
+      "en": "possible GPS jamming around the site"
+    },
+    "gps-spoofing": {
+      "file": "gps-spoofing.mp3",
+      "ar": "انْتِحَال مُحْتَمَل لِإِشَارَة تَحْدِيد المَوَاقِع",
+      "en": "possible GPS spoofing"
+    },
+    "sat-soon": {
+      "file": "sat-soon.mp3",
+      "ar": "قَمَر تَصْوِير سَيَمُرّ فَوْقَ المُنْشَأَة قَرِيبًا. غَطُّوا الأَنْشِطَة الحَسَّاسَة",
+      "en": "an imaging satellite will pass overhead soon, cover sensitive activity"
+    },
+    "sat-overhead": {
+      "file": "sat-overhead.mp3",
+      "ar": "قَمَر تَصْوِير فَوْقَ المُنْشَأَة الآن. غَطُّوا الأَنْشِطَة الحَسَّاسَة",
+      "en": "an imaging satellite is overhead now, cover sensitive activity"
+    },
+    "radio-hacktool": {
+      "file": "radio-hacktool.mp3",
+      "ar": "جِهَاز اخْتِرَاق قُرْبَ البَوَّابَة",
+      "en": "a hacking tool is near the gate"
+    },
+    "radio-deauth": {
+      "file": "radio-deauth.mp3",
+      "ar": "هُجُوم يَقْطَع اتِّصَال الوَاي فَاي",
+      "en": "an attack is cutting Wi-Fi connections"
+    },
+    "radio-jamming": {
+      "file": "radio-jamming.mp3",
+      "ar": "تَشْوِيش لَاسِلْكِيّ مُحْتَمَل",
+      "en": "possible radio jamming"
+    },
+    "radio-eviltwin": {
+      "file": "radio-eviltwin.mp3",
+      "ar": "نُقْطَة وُصُول وَاي فَاي مُزَيَّفَة",
+      "en": "a fake Wi-Fi access point"
+    },
+    "radio-bleflood": {
+      "file": "radio-bleflood.mp3",
+      "ar": "إِغْرَاق بِإِشَارَات البْلُوتُوث",
+      "en": "a Bluetooth flood"
+    },
+    "device-unauthorized": {
+      "file": "device-unauthorized.mp3",
+      "ar": "جِهَاز غَيْر مُصَرَّح بِهِ عِنْدَ البَوَّابَة",
+      "en": "an unauthorized device is at the gate"
+    },
+    "cam-armed": {
+      "file": "cam-armed.mp3",
+      "ar": "شَخْصٌ مُسَلَّحٌ، السِّلَاحُ فِي يَدِهِ",
+      "en": "an armed person, weapon in hand"
+    },
+    "cam-firearm": {
+      "file": "cam-firearm.mp3",
+      "ar": "سِلَاحٌ نَارِيّ ظَاهِرٌ فِي الكَامِيرَا",
+      "en": "a firearm is visible on camera"
+    },
+    "cam-weapon": {
+      "file": "cam-weapon.mp3",
+      "ar": "سِلَاحٌ أَبْيَض ظَاهِرٌ فِي الكَامِيرَا",
+      "en": "a bladed weapon is visible on camera"
+    },
+    "cam-arson": {
+      "file": "cam-arson.mp3",
+      "ar": "إِشْعَالٌ مُتَعَمَّدٌ مُحْتَمَل: نِيرَانٌ بِجَانِبِ شَخْص",
+      "en": "possible arson: flames next to a person"
+    },
+    "cam-fire": {
+      "file": "cam-fire.mp3",
+      "ar": "حَرِيقٌ فِي مَجَالِ الكَامِيرَا",
+      "en": "fire on camera"
+    },
+    "cam-smoking": {
+      "file": "cam-smoking.mp3",
+      "ar": "شَخْصٌ يُدَخِّنُ فِي المَوْقِع",
+      "en": "someone is smoking on site"
+    },
+    "cam-smoke": {
+      "file": "cam-smoke.mp3",
+      "ar": "دُخَانٌ فِي مَجَالِ الكَامِيرَا",
+      "en": "smoke on camera"
+    },
+    "cam-zone": {
+      "file": "cam-zone.mp3",
+      "ar": "شَخْصٌ فِي مِنْطَقَةٍ مَحْظُورَة",
+      "en": "a person in a restricted zone"
+    },
+    "cam-intrusion": {
+      "file": "cam-intrusion.mp3",
+      "ar": "شَخْصٌ غَيْرُ مُصَرَّحٍ لَهُ فِي مِنْطَقَةٍ حَسَّاسَة",
+      "en": "an unauthorized person in a sensitive area"
+    },
+    "cam-door": {
+      "file": "cam-door.mp3",
+      "ar": "شَخْصٌ يُحَاوِلُ فَتْحَ بَابٍ مَحْظُور",
+      "en": "someone is trying to open a restricted door"
+    },
+    "cam-dwell": {
+      "file": "cam-dwell.mp3",
+      "ar": "شَخْصٌ بَاقٍ فِي مِنْطَقَةٍ حَسَّاسَة",
+      "en": "someone is staying in a sensitive area"
+    },
+    "cam-climb": {
+      "file": "cam-climb.mp3",
+      "ar": "اخْتِرَاقٌ لِلْمُحِيط: شَخْصٌ يَتَسَلَّقُ السُّور",
+      "en": "perimeter breach: someone is climbing the fence"
+    },
+    "cam-person": {
+      "file": "cam-person.mp3",
+      "ar": "شَخْصٌ قُرْبَ المَبْنَى",
+      "en": "a person near the building"
+    },
+    "cam-loiter": {
+      "file": "cam-loiter.mp3",
+      "ar": "شَخْصٌ يَتَسَكَّعُ حَوْلَ المُنْشَأَة",
+      "en": "someone is loitering around the site"
+    },
+    "cam-circling": {
+      "file": "cam-circling.mp3",
+      "ar": "شَخْصٌ يَدُورُ حَوْلَ المَبْنَى",
+      "en": "someone is circling the building"
+    },
+    "cam-running": {
+      "file": "cam-running.mp3",
+      "ar": "شَخْصٌ يَرْكُضُ فِي المَوْقِع",
+      "en": "someone is running on site"
+    },
+    "cam-fall": {
+      "file": "cam-fall.mp3",
+      "ar": "شَخْصٌ سَاقِطٌ عَلَى الأَرْض",
+      "en": "a person is down on the ground"
+    },
+    "generic": {
+      "file": "generic.mp3",
+      "ar": "حَادِثَةٌ أَمْنِيَّةٌ جَدِيدَةٌ",
+      "en": "a new security incident"
+    },
+    "sawn-aircraft-ar": {
+      "file": "sawn-aircraft-ar.mp3",
+      "ar": "تنبيه بشأن المجال الجوي تم رصد نشاط طائرات بالقرب من المنطقة الخاضعة للمراقبة. يُلْزَم التحقق من الرحلة الجوية.",
+      "en": ""
+    },
+    "sawn-aircraft-en": {
+      "file": "sawn-aircraft-en.mp3",
+      "ar": "",
+      "en": "Airspace advisory. Aircraft activity detected near the monitored area. Flight verification is required"
+    },
+    "sawn-drone-ar": {
+      "file": "sawn-drone-ar.mp3",
+      "ar": "تنبيه أمني للمجال الجوي تم رصد طائرة بدون طيار يُحتمل أن تكون غير مصرح بها داخل المجال الجوي الخاضع للمراقبة. على أفراد الأمن إجراء تحقيق فوري.",
+      "en": ""
+    },
+    "sawn-drone-en": {
+      "file": "sawn-drone-en.mp3",
+      "ar": "",
+      "en": "Airspace security alert. A potentially unauthorized drone has been detected in monitored airspace. Security personnel, investigate immediately"
+    },
+    "sawn-fence-ar": {
+      "file": "sawn-fence-ar.mp3",
+      "ar": "تنبيهٌ هام بشأن المحيط الخارجي تم رصد احتماليه تسلق السياج. على أفراد الأمن التوجه فوراً إلى المنطقة المعنية للتحقق من الأمر.",
+      "en": ""
+    },
+    "sawn-fence-en": {
+      "file": "sawn-fence-en.mp3",
+      "ar": "",
+      "en": "Critical perimeter alert. Possible fence climbing detected. Security personnel, investigate the affected zone immediately"
+    },
+    "sawn-weapon-ar": {
+      "file": "sawn-weapon-ar.mp3",
+      "ar": "تنبيه أمني عاجل تشير تحليلات الكاميرا إلى احتمال وقوع حادثة تتعلق بسلاح. يُلْزَم التحقق الفوري واتخاذ إجراء أمني.",
+      "en": ""
+    },
+    "sawn-weapon-en": {
+      "file": "sawn-weapon-en.mp3",
+      "ar": "",
+      "en": "Critical security alert. Camera analytics indicate a possible weapon-related incident. Immediate verification and security response are required"
+    },
+    "sawn-vault-ar": {
+      "file": "sawn-vault-ar.mp3",
+      "ar": "تنبيه أمني حرج. تم رصد فتح غير مُصرحٍ به للخزنة. يُلْزَم اتخاذ إجراء أمني فوري.",
+      "en": ""
+    },
+    "sawn-vault-en": {
+      "file": "sawn-vault-en.mp3",
+      "ar": "",
+      "en": "Critical security alert. Unauthorized vault opening detected. Immediate security response required"
+    },
+    "sawn-gateb-ar": {
+      "file": "sawn-gateb-ar.mp3",
+      "ar": "تنبيه بشأن تقييد الوصول تم رصد محاولة دخول عند البوابة ب (Gate B)، في الطابق الخامس. يرجى التحقق من بيانات الاعتماد والتصريح الأمني.",
+      "en": ""
+    },
+    "sawn-gateb-en": {
+      "file": "sawn-gateb-en.mp3",
+      "ar": "",
+      "en": "Restricted access alert. An access attempt has been detected at Gate B, Level Five. Verify credentials and security clearance"
+    },
+    "sawn-wireless-ar": {
+      "file": "sawn-wireless-ar.mp3",
+      "ar": "تنبيه أمني تم رصد جهاز لاسلكي مجهول بالقرب من المنطقة الخاضعة للمراقبة. يُلْزَم التحقق من التصريح.",
+      "en": ""
+    },
+    "sawn-wireless-en": {
+      "file": "sawn-wireless-en.mp3",
+      "ar": "",
+      "en": "Security advisory. An unknown wireless device has been detected near the monitored zone. Authorization verification is required"
+    },
+    "sawn-metal-ar": {
+      "file": "sawn-metal-ar.mp3",
+      "ar": "تحذير أمني تم رصدُ معدن عند نقطة التفتيش. يُلْزَم إجراء فحص إضافي.",
+      "en": ""
+    },
+    "sawn-metal-en": {
+      "file": "sawn-metal-en.mp3",
+      "ar": "",
+      "en": "Security warning. Metal detected at the screening checkpoint. Additional inspection is required"
+    },
+    "sawn-space-ar": {
+      "file": "sawn-space-ar.mp3",
+      "ar": "تحذير أمن الفضاء تم الإبلاغ عن حدث غير معروف يتعلق بقمر صناعي. يُلْزَم التحقق من المصدر.",
+      "en": ""
+    },
+    "sawn-space-en": {
+      "file": "sawn-space-en.mp3",
+      "ar": "",
+      "en": "Space security advisory. An unrecognized satellite-related event has been reported. Source verification is required"
+    },
+    "sawn-system-ar": {
+      "file": "sawn-system-ar.mp3",
+      "ar": "تحذير من النظام فُقد الاتصال بأحد الأنظِمة الفرعية الأمنية. يُلْزَم إجراء تحقيق فني.",
+      "en": ""
+    },
+    "sawn-system-en": {
+      "file": "sawn-system-en.mp3",
+      "ar": "",
+      "en": "System warning. Communication with a security subsystem has been lost. Technical investigation is required"
+    }
+  }
+}
